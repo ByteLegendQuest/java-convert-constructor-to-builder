@@ -37,7 +37,7 @@ Any changes to files other than the following files will be rejected:**
 
 ## 将构造器转换为<ruby>建造者模式<rt>Builder Pattern</rt></ruby>
 
-[设计模式](https://zh.wikipedia.org/wiki/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F_(%E8%AE%A1%E7%AE%97%E6%9C%BA)的出现是为了解决一些特定问题。
+[设计模式](https://zh.wikipedia.org/wiki/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F_%28%E8%AE%A1%E7%AE%97%E6%9C%BA%29)的出现是为了解决一些特定问题。
 
 [src/main/java/com/bytelegend/Computer.java](https://github.com/ByteLegendQuest/java-convert-constructor-to-builder/blob/main/src/main/java/com/bytelegend/Computer.java)中现在包含一个巨大无比的构造器，请将其改写为建造者模式（完成`ComputerBuilder`类），在亲自动手实践的过程中体会一下建造者模式的好处。
 
