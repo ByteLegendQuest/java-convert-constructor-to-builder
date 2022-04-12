@@ -7,7 +7,7 @@
 
 [Design patterns](https://en.wikipedia.org/wiki/Software_design_pattern) are general, reusable solutions to commonly occurring problems.
 
-There is a huge horrible constructor in [src/main/java/com/bytelegend/Computer.java](https://github.com/ByteLegendQuest/java-convert-constructor-to-builder/blob/main/src/main/java/com/bytelegend/Computer.java), please convert it to `Builer Pattern` (complete `ComputerBuilder` class) and
+There are several huge horrible constructors in [src/main/java/com/bytelegend/Computer.java](https://github.com/ByteLegendQuest/java-convert-constructor-to-builder/blob/main/src/main/java/com/bytelegend/Computer.java), please convert them to `Builer Pattern` (complete `ComputerBuilder` class) and
 understand the advantages of it in your own hands.
 
 - You can accomplish this challenge via any way below:
@@ -39,7 +39,7 @@ Any changes to files other than the following files will be rejected:**
 
 [设计模式](https://zh.wikipedia.org/wiki/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F_%28%E8%AE%A1%E7%AE%97%E6%9C%BA%29)的出现是为了解决一些特定问题。
 
-[src/main/java/com/bytelegend/Computer.java](https://github.com/ByteLegendQuest/java-convert-constructor-to-builder/blob/main/src/main/java/com/bytelegend/Computer.java)中现在包含一个巨大无比的构造器，请将其改写为建造者模式（完成`ComputerBuilder`类），在亲自动手实践的过程中体会一下建造者模式的好处。
+[src/main/java/com/bytelegend/Computer.java](https://github.com/ByteLegendQuest/java-convert-constructor-to-builder/blob/main/src/main/java/com/bytelegend/Computer.java)中现在包含若干巨大无比的构造器，请将其改写为建造者模式（完成`ComputerBuilder`类），在亲自动手实践的过程中体会一下建造者模式的好处。
 
 - 你可以使用以下任意一种方法完成挑战：
   - 初学者推荐：运行`git clone https://git.bytelegend.com/ByteLegendQuest/java-convert-constructor-to-builder`将代码下载到本地，在本地使用IDE调试完成后复制到网页编辑器里提交。
@@ -69,10 +69,10 @@ Any changes to files other than the following files will be rejected:**
 
 [設計模式](https://en.wikipedia.org/wiki/Software_design_pattern)是針對常見問題的通用、可重用的解決方案。
 
-在[src/main/java/com/bytelegend/Computer.java](https://github.com/ByteLegendQuest/java-convert-constructor-to-builder/blob/main/src/main/java/com/bytelegend/Computer.java)中有一個巨大的可怕的構造函數，請將其轉換為`Builer Pattern` （完整的`ComputerBuilder`類）並了解它的優點在您自己的手中。
+在[src/main/java/com/bytelegend/Computer.java](https://github.com/ByteLegendQuest/java-convert-constructor-to-builder/blob/main/src/main/java/com/bytelegend/Computer.java)中有幾個巨大的可怕的構造函數，請將它們轉換為`Builer Pattern` （完整的`ComputerBuilder`類）並了解它的優點在你自己的手中。
 
 -   您可以通過以下任何方式完成此挑戰：
-    -   推薦給初學者：運行`git clone https://github.com/ByteLegendQuest/java-convert-constructor-to-builder`下載代碼，在本地 IDE 中完成挑戰，然後在網頁編輯器中復制/粘貼/提交答案.
+    -   建議初學者：運行`git clone https://github.com/ByteLegendQuest/java-convert-constructor-to-builder`下載代碼，在本地 IDE 中完成挑戰，然後在 Web 編輯器中復制/粘貼/提交答案.
         -   如果你不知道怎麼做，你可以點擊[import project into IDEA](https://github.com/ByteLegendQuest/java-convert-constructor-to-builder/blob/main/docs/en/clone-and-import.md) / [import project into VSCode](https://github.com/ByteLegendQuest/java-convert-constructor-to-builder/blob/main/docs/en/clone-and-import-vscode.md) 。
         -   在提交代碼之前，您最好在本地運行`mvn verify`以節省時間。不知道怎麼樣？請參閱[在 IDEA](https://github.com/ByteLegendQuest/java-convert-constructor-to-builder/blob/main/docs/en/run-mvn-verify-idea.md) [中進行本地驗證/在 VSCode 中進行本地驗證](https://github.com/ByteLegendQuest/java-convert-constructor-to-builder/blob/main/docs/en/run-mvn-verify-vscode.md)。
     -   非常不推薦：如果你不喜歡`git`操作，可以[點擊這裡下載壓縮代碼](https://codeload.github.com/ByteLegendQuest/java-convert-constructor-to-builder/zip/refs/heads/main)。
@@ -98,7 +98,7 @@ Convertir constructor en patrón constructor
 
 Los [patrones de diseño](https://en.wikipedia.org/wiki/Software_design_pattern) son soluciones generales y reutilizables para problemas comunes.
 
-Hay un enorme y horrible constructor en [src/main/java/com/bytelegend/Computer.java](https://github.com/ByteLegendQuest/java-convert-constructor-to-builder/blob/main/src/main/java/com/bytelegend/Computer.java) , por favor conviértalo a `Builer Pattern` (clase completa de `ComputerBuilder` ) y comprenda sus ventajas en sus propias manos.
+Hay varios constructores enormes y horribles en [src/main/java/com/bytelegend/Computer.java](https://github.com/ByteLegendQuest/java-convert-constructor-to-builder/blob/main/src/main/java/com/bytelegend/Computer.java) , conviértalos a `Builer Pattern` (clase completa de `ComputerBuilder` ) y comprenda las ventajas en sus propias manos.
 
 -   Puede lograr este desafío de cualquier manera a continuación:
     -   Recomendado para principiantes: ejecute `git clone https://github.com/ByteLegendQuest/java-convert-constructor-to-builder` para descargar el código, termine el desafío en su IDE local, luego copie/pegue/envíe la respuesta en el editor web .
@@ -127,7 +127,7 @@ Si necesita ayuda, no dude en unirse a la [comunidad de Discord](https://discord
 
 [أنماط التصميم](https://en.wikipedia.org/wiki/Software_design_pattern) هي حلول عامة قابلة لإعادة الاستخدام للمشاكل الشائعة الحدوث.
 
-هناك مُنشئ فظيع ضخم في [src / main / java / com / bytelegend / Computer.java](https://github.com/ByteLegendQuest/java-convert-constructor-to-builder/blob/main/src/main/java/com/bytelegend/Computer.java) ، يرجى تحويله إلى `Builer Pattern` (فئة كاملة من مُنشئ `ComputerBuilder` ) وفهم مزاياها بين يديك.
+هناك العديد من الصانعين الرهيبين في [src / main / java / com / bytelegend / Computer.java](https://github.com/ByteLegendQuest/java-convert-constructor-to-builder/blob/main/src/main/java/com/bytelegend/Computer.java) ، يرجى تحويلهم إلى `Builer Pattern` (فئة كاملة من مُنشئ `ComputerBuilder` ) وفهم مزاياها بين يديك.
 
 -   يمكنك إنجاز هذا التحدي بأي طريقة أدناه:
     -   موصى به للمبتدئين: قم بتشغيل `git clone https://github.com/ByteLegendQuest/java-convert-constructor-to-builder` لتنزيل الكود ، وإنهاء التحدي في IDE المحلي الخاص بك ، ثم نسخ / لصق / إرسال الإجابة في محرر الويب .
@@ -156,7 +156,7 @@ Converter construtor para padrão de construtor
 
 [Padrões de projeto](https://en.wikipedia.org/wiki/Software_design_pattern) são soluções gerais e reutilizáveis para problemas comuns.
 
-Existe um construtor enorme e horrível em [src/main/java/com/bytelegend/Computer.java](https://github.com/ByteLegendQuest/java-convert-constructor-to-builder/blob/main/src/main/java/com/bytelegend/Computer.java) , por favor converta-o para `Builer Pattern` (classe `ComputerBuilder` completa) e entenda as vantagens dele em suas próprias mãos.
+Existem vários construtores enormes e horríveis em [src/main/java/com/bytelegend/Computer.java](https://github.com/ByteLegendQuest/java-convert-constructor-to-builder/blob/main/src/main/java/com/bytelegend/Computer.java) , por favor converta-os para `Builer Pattern` (classe `ComputerBuilder` completa) e entenda as vantagens disso em suas próprias mãos.
 
 -   Você pode realizar esse desafio de qualquer maneira abaixo:
     -   Recomendado para iniciantes: execute `git clone https://github.com/ByteLegendQuest/java-convert-constructor-to-builder` para baixar o código, conclua o desafio em seu IDE local e copie/cole/envie a resposta no editor da web .
@@ -185,7 +185,7 @@ Konversikan Konstruktor ke Pola Pembangun
 
 [Pola desain](https://en.wikipedia.org/wiki/Software_design_pattern) adalah solusi umum yang dapat digunakan kembali untuk masalah yang sering terjadi.
 
-Ada konstruktor besar yang mengerikan di [src/main/Java/com/bytelegend/Computer.java](https://github.com/ByteLegendQuest/java-convert-constructor-to-builder/blob/main/src/main/java/com/bytelegend/Computer.java) , harap ubah ke `Builer Pattern` (kelas `ComputerBuilder` lengkap) dan pahami keuntungannya di tangan Anda sendiri.
+Ada beberapa konstruktor besar yang mengerikan di [src/main/Java/com/bytelegend/Computer.java](https://github.com/ByteLegendQuest/java-convert-constructor-to-builder/blob/main/src/main/java/com/bytelegend/Computer.java) , harap konversikan ke `Builer Pattern` (kelas `ComputerBuilder` lengkap) dan pahami kelebihannya di tangan Anda sendiri.
 
 -   Anda dapat menyelesaikan tantangan ini melalui cara apa pun di bawah ini:
     -   Direkomendasikan untuk pemula: jalankan `git clone https://github.com/ByteLegendQuest/java-convert-constructor-to-builder` untuk mengunduh kode, selesaikan tantangan di IDE lokal Anda, lalu salin/tempel/kirim jawabannya di editor web .
@@ -214,7 +214,7 @@ Convertir le constructeur en modèle de constructeur
 
 Les [modèles de conception](https://en.wikipedia.org/wiki/Software_design_pattern) sont des solutions générales et réutilisables à des problèmes courants.
 
-Il y a un énorme constructeur horrible dans [src/main/java/com/bytelegend/Computer.java](https://github.com/ByteLegendQuest/java-convert-constructor-to-builder/blob/main/src/main/java/com/bytelegend/Computer.java) , veuillez le convertir en `Builer Pattern` (classe `ComputerBuilder` complète) et en comprendre les avantages entre vos propres mains.
+Il existe plusieurs énormes constructeurs horribles dans [src/main/java/com/bytelegend/Computer.java](https://github.com/ByteLegendQuest/java-convert-constructor-to-builder/blob/main/src/main/java/com/bytelegend/Computer.java) , veuillez les convertir en `Builer Pattern` (classe `ComputerBuilder` complète) et en comprendre les avantages entre vos propres mains.
 
 -   Vous pouvez accomplir ce défi de n'importe quelle manière ci-dessous:
     -   Recommandé pour les débutants : exécutez `git clone https://github.com/ByteLegendQuest/java-convert-constructor-to-builder` pour télécharger le code, terminez le défi dans votre IDE local, puis copiez/collez/soumettez la réponse dans l'éditeur Web .
@@ -243,7 +243,7 @@ Si vous avez besoin d'aide, n'hésitez pas à rejoindre la [communauté Discord]
 
 [デザインパターン](https://en.wikipedia.org/wiki/Software_design_pattern)は、一般的に発生する問題に対する一般的な再利用可能なソリューションです。
 
-[src / main / java / com / bytelegend / Computer.java](https://github.com/ByteLegendQuest/java-convert-constructor-to-builder/blob/main/src/main/java/com/bytelegend/Computer.java)には巨大な恐ろしいコンストラクターがあります。それを`Builer Pattern` （完全な`ComputerBuilder`クラス）に変換して、自分の手でその利点を理解してください。
+[src / main / java / com / bytelegend / Computer.java](https://github.com/ByteLegendQuest/java-convert-constructor-to-builder/blob/main/src/main/java/com/bytelegend/Computer.java)には、いくつかの巨大な恐ろしいコンストラクターがあります。それらを`Builer Pattern` （完全な`ComputerBuilder`クラス）に変換して、自分の手でその利点を理解してください。
 
 -   この課題は、以下のいずれかの方法で達成できます。
     -   初心者に推奨： `git clone https://github.com/ByteLegendQuest/java-convert-constructor-to-builder`を実行してコードをダウンロードし、ローカルIDEでチャレンジを終了してから、Webエディターで回答をコピー/貼り付け/送信します。
@@ -272,7 +272,7 @@ Si vous avez besoin d'aide, n'hésitez pas à rejoindre la [communauté Discord]
 
 [Шаблоны проектирования](https://en.wikipedia.org/wiki/Software_design_pattern) — это общие, многократно используемые решения часто возникающих проблем.
 
-В [src/main/java/com/bytelegend/Computer.java](https://github.com/ByteLegendQuest/java-convert-constructor-to-builder/blob/main/src/main/java/com/bytelegend/Computer.java) есть огромный ужасный конструктор, пожалуйста, преобразуйте его в `Builer Pattern` (полный класс `ComputerBuilder` ) и поймите его преимущества своими руками.
+В [src/main/java/com/bytelegend/Computer.java](https://github.com/ByteLegendQuest/java-convert-constructor-to-builder/blob/main/src/main/java/com/bytelegend/Computer.java) есть несколько огромных ужасных конструкторов, пожалуйста, конвертируйте их в `Builer Pattern` (полный класс `ComputerBuilder` ) и поймите его преимущества своими руками.
 
 -   Вы можете выполнить эту задачу любым способом, указанным ниже:
     -   Рекомендуется для начинающих: запустите `git clone https://github.com/ByteLegendQuest/java-convert-constructor-to-builder` , чтобы загрузить код, завершите задание в локальной среде IDE, затем скопируйте/вставьте/отправьте ответ в веб-редакторе. .
@@ -301,7 +301,7 @@ Konvertieren Sie den Konstruktor in das Builder-Muster
 
 [Entwurfsmuster](https://en.wikipedia.org/wiki/Software_design_pattern) sind allgemeine, wiederverwendbare Lösungen für häufig auftretende Probleme.
 
-Es gibt einen riesigen schrecklichen Konstruktor in [src/main/java/com/bytelegend/Computer.java](https://github.com/ByteLegendQuest/java-convert-constructor-to-builder/blob/main/src/main/java/com/bytelegend/Computer.java) , bitte konvertieren Sie ihn in das `Builer Pattern` (vollständige `ComputerBuilder` -Klasse) und verstehen Sie die Vorteile davon in Ihren eigenen Händen.
+Es gibt mehrere riesige schreckliche Konstruktoren in [src/main/java/com/bytelegend/Computer.java](https://github.com/ByteLegendQuest/java-convert-constructor-to-builder/blob/main/src/main/java/com/bytelegend/Computer.java) , konvertieren Sie sie bitte in `Builer Pattern` (vollständige `ComputerBuilder` -Klasse) und verstehen Sie die Vorteile davon in Ihren eigenen Händen.
 
 -   Sie können diese Herausforderung auf eine der folgenden Arten meistern:
     -   Empfohlen für Anfänger: Führen Sie `git clone https://github.com/ByteLegendQuest/java-convert-constructor-to-builder` aus, um den Code herunterzuladen, beenden Sie die Herausforderung in Ihrer lokalen IDE und kopieren/fügen Sie dann die Antwort im Web-Editor ein/übermitteln Sie sie .
@@ -330,7 +330,7 @@ Wenn Sie Hilfe benötigen, können Sie sich gerne der [Discord Community](https:
 
 [디자인 패턴](https://en.wikipedia.org/wiki/Software_design_pattern) 은 일반적으로 발생하는 문제에 대한 일반적이고 재사용 가능한 솔루션입니다.
 
-[src/main/java/com/bytelegend/Computer.java](https://github.com/ByteLegendQuest/java-convert-constructor-to-builder/blob/main/src/main/java/com/bytelegend/Computer.java) 에 거대한 생성자가 있습니다. 이를 `Builer Pattern` ( `ComputerBuilder` 클래스 전체)으로 변환하고 이점을 직접 이해하십시오.
+[src/main/java/com/bytelegend/Computer.java](https://github.com/ByteLegendQuest/java-convert-constructor-to-builder/blob/main/src/main/java/com/bytelegend/Computer.java) 에는 여러 개의 거대한 생성자가 있습니다. 그것들을 `Builer Pattern` ( `ComputerBuilder` 클래스 전체)으로 변환하고 그 이점을 직접 이해하십시오.
 
 -   아래 방법을 통해 이 챌린지를 완료할 수 있습니다.
     -   초보자를 위한 권장 사항: `git clone https://github.com/ByteLegendQuest/java-convert-constructor-to-builder` 를 실행하여 코드를 다운로드하고 로컬 IDE에서 챌린지를 완료한 다음 웹 편집기에서 답변을 복사/붙여넣기/제출합니다. .
@@ -359,7 +359,7 @@ Converti Costruttore in Pattern Builder
 
 I [modelli di progettazione](https://en.wikipedia.org/wiki/Software_design_pattern) sono soluzioni generali e riutilizzabili a problemi che si verificano comunemente.
 
-C'è un enorme orribile costruttore in [src/main/java/com/bytelegend/Computer.java](https://github.com/ByteLegendQuest/java-convert-constructor-to-builder/blob/main/src/main/java/com/bytelegend/Computer.java) , convertilo in `Builer Pattern` (classe completa di `ComputerBuilder` ) e comprendine i vantaggi nelle tue mani.
+Ci sono molti enormi costruttori orribili in [src/main/java/com/bytelegend/Computer.java](https://github.com/ByteLegendQuest/java-convert-constructor-to-builder/blob/main/src/main/java/com/bytelegend/Computer.java) , convertili in `Builer Pattern` (classe completa di `ComputerBuilder` ) e comprendine i vantaggi nelle tue mani.
 
 -   Puoi portare a termine questa sfida in qualsiasi modo di seguito:
     -   Consigliato per i principianti: esegui `git clone https://github.com/ByteLegendQuest/java-convert-constructor-to-builder` per scaricare il codice, completa la sfida nel tuo IDE locale, quindi copia/incolla/invia la risposta nell'editor web .
