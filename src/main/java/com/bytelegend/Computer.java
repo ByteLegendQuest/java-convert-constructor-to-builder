@@ -147,85 +147,25 @@ public class Computer {
     }
 
     public static void main(String[] args) {
-        Computer computer = Computer.builder("Intel", "16GB", "Asus")
-                .withStorage("1TB")
-                .withDisplay("15.6")
-                .withKeyboard("USB")
-                .withMouse("USB")
-                .withSpeaker("USB")
-                .withBattery("Li-ion")
-                .build();
+        Computer computer =
+                Computer.builder("Intel", "16GB", "Asus")
+                        .withStorage("1TB")
+                        .withDisplay("15.6")
+                        .withKeyboard("USB")
+                        .withMouse("USB")
+                        .withSpeaker("USB")
+                        .withBattery("Li-ion")
+                        .build();
         System.out.println(computer);
     }
 
     public static ComputerBuilder builder(String cpu, String ram, String motherboard) {
-        return ComputerBuilder.aComputer().withCpu(cpu).withRam(ram).withMotherboard(motherboard);
+        return new ComputerBuilder(cpu, ram, motherboard);
     }
+
     public static final class ComputerBuilder {
-        private String cpu;
-        private String ram;
-        private String motherboard;
-        private String storage;
-        private String display;
-        private String keyboard;
-        private String mouse;
-        private String speaker;
-        private String battery;
-
-        private ComputerBuilder() {
-        }
-
-        public static ComputerBuilder aComputer() {
-            return new ComputerBuilder();
-        }
-
-        public ComputerBuilder withCpu(String cpu) {
-            this.cpu = cpu;
-            return this;
-        }
-
-        public ComputerBuilder withRam(String ram) {
-            this.ram = ram;
-            return this;
-        }
-
-        public ComputerBuilder withMotherboard(String motherboard) {
-            this.motherboard = motherboard;
-            return this;
-        }
-
-        public ComputerBuilder withStorage(String storage) {
-            this.storage = storage;
-            return this;
-        }
-
-        public ComputerBuilder withDisplay(String display) {
-            this.display = display;
-            return this;
-        }
-
-        public ComputerBuilder withKeyboard(String keyboard) {
-            this.keyboard = keyboard;
-            return this;
-        }
-
-        public ComputerBuilder withMouse(String mouse) {
-            this.mouse = mouse;
-            return this;
-        }
-
-        public ComputerBuilder withSpeaker(String speaker) {
-            this.speaker = speaker;
-            return this;
-        }
-
-        public ComputerBuilder withBattery(String battery) {
-            this.battery = battery;
-            return this;
-        }
-
         public Computer build() {
-            return new Computer(cpu, ram, motherboard, storage, display, keyboard, mouse, speaker, battery);
+            return new Computer();
         }
     }
 }
