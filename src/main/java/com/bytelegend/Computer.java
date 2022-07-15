@@ -211,7 +211,8 @@ public class Computer {
         }
 
         public Computer build() {
-            return new Computer(this.cpu,this.ram,this.motherboard,this.storage,this.display,this.keyboard,this.mouse,this.speaker,this.battery);
+            return new Computer(this.cpu, this.ram, this.motherboard, this.storage, this.display,
+                    this.keyboard, this.mouse, this.speaker, this.battery);
         }
     }
 }
