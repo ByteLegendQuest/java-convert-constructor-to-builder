@@ -186,9 +186,9 @@ public class Computer {
             this.battery = battery;
             return this;
         }
-        
+
         public Computer build() {
-            return new Computer();
+            return new Computer(this);
         }
     }
 }
