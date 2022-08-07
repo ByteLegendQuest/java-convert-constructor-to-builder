@@ -1,42 +1,24 @@
 package com.bytelegend;
 
 public class Computer {
-    /**
-     * The CPU model, required.
-     */
+    /** The CPU model, required. */
     private final String cpu;
-    /**
-     * The RAM model, required.
-     */
+    /** The RAM model, required. */
     private final String ram;
-    /**
-     * The motherboard model, required.
-     */
+    /** The motherboard model, required. */
     private final String motherboard;
-    /**
-     * The storage model, optional.
-     */
-    private String storage;
-    /**
-     * The display model, optional.
-     */
-    private String display;
-    /**
-     * The keyboard model, optional.
-     */
-    private String keyboard;
-    /**
-     * The mouse model, optional.
-     */
-    private String mouse;
-    /**
-     * The speaker model, optional.
-     */
-    private String speaker;
-    /**
-     * The battery model, optional.
-     */
-    private String battery;
+    /** The storage model, optional. */
+    private final String storage;
+    /** The display model, optional. */
+    private final String display;
+    /** The keyboard model, optional. */
+    private final String keyboard;
+    /** The mouse model, optional. */
+    private final String mouse;
+    /** The speaker model, optional. */
+    private final String speaker;
+    /** The battery model, optional. */
+    private final String battery;
 
     public Computer(String cpu, String ram, String motherboard) {
         this(cpu, ram, motherboard, null);
@@ -48,30 +30,6 @@ public class Computer {
 
     public Computer(String cpu, String ram, String motherboard, String storage, String display) {
         this(cpu, ram, motherboard, storage, display, null);
-    }
-
-    public void setStorage(String storage) {
-        this.storage = storage;
-    }
-
-    public void setDisplay(String display) {
-        this.display = display;
-    }
-
-    public void setKeyboard(String keyboard) {
-        this.keyboard = keyboard;
-    }
-
-    public void setMouse(String mouse) {
-        this.mouse = mouse;
-    }
-
-    public void setSpeaker(String speaker) {
-        this.speaker = speaker;
-    }
-
-    public void setBattery(String battery) {
-        this.battery = battery;
     }
 
     public Computer(
@@ -206,44 +164,8 @@ public class Computer {
     }
 
     public static final class ComputerBuilder {
-        private Computer computer;
-
-        public ComputerBuilder(String cpu, String ram, String motherboard) {
-            computer = new Computer(cpu, ram, motherboard);
-        }
-
-        public ComputerBuilder withStorage(String storage) {
-            computer.setStorage(storage);
-            return this;
-        }
-
-        public ComputerBuilder withDisplay(String display) {
-            computer.setDisplay(display);
-            return this;
-        }
-
-        public ComputerBuilder withKeyboard(String keyboard) {
-            computer.setKeyboard(keyboard);
-            return this;
-        }
-
-        public ComputerBuilder withMouse(String mouse) {
-            computer.setMouse(mouse);
-            return this;
-        }
-
-        public ComputerBuilder withSpeaker(String speaker) {
-            computer.setSpeaker(speaker);
-            return this;
-        }
-
-        public ComputerBuilder withBattery(String battery) {
-            computer.setBattery(battery);
-            return this;
-        }
-
         public Computer build() {
-            return computer;
+            return new Computer();
         }
     }
 }
