@@ -164,8 +164,55 @@ public class Computer {
     }
 
     public static final class ComputerBuilder {
+        private final String cpu;
+        private final String ram;
+        private final String motherboard;
+        private String storage;
+        private String display;
+        private String keyboard;
+        private String mouse;
+        private String speaker;
+        private String battery;
+
+        public ComputerBuilder(String cpu, String ram, String motherboard) {
+            this.cpu = cpu;
+            this.ram = ram;
+            this.motherboard = motherboard;
+        }
+
         public Computer build() {
-            return new Computer();
+            return new Computer(this.cpu, this.ram, this.motherboard, this.storage, this.display, this.keyboard,
+                this.mouse, this.speaker, this.battery);
+        }
+
+        public ComputerBuilder withStorage(String storage) {
+            this.storage = storage;
+            return this;
+        }
+
+        public ComputerBuilder withDisplay(String display) {
+            this.display = display;
+            return this;
+        }
+
+        public ComputerBuilder withKeyboard(String keyboard) {
+            this.keyboard = keyboard;
+            return this;
+        }
+
+        public ComputerBuilder withMouse(String mouse) {
+            this.mouse = mouse;
+            return this;
+        }
+
+        public ComputerBuilder withSpeaker(String speaker) {
+            this.speaker = speaker;
+            return this;
+        }
+
+        public ComputerBuilder withBattery(String battery) {
+            this.battery = battery;
+            return this;
         }
     }
 }
