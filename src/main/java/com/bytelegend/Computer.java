@@ -2,23 +2,26 @@ package com.bytelegend;
 
 public class Computer {
     /** The CPU model, required. */
-    private final String cpu;
+    private  String cpu;
     /** The RAM model, required. */
-    private final String ram;
+    private  String ram;
     /** The motherboard model, required. */
-    private final String motherboard;
+    private  String motherboard;
     /** The storage model, optional. */
-    private final String storage;
+    private  String storage;
     /** The display model, optional. */
-    private final String display;
+    private  String display;
     /** The keyboard model, optional. */
-    private final String keyboard;
+    private  String keyboard;
     /** The mouse model, optional. */
-    private final String mouse;
+    private  String mouse;
     /** The speaker model, optional. */
-    private final String speaker;
+    private  String speaker;
     /** The battery model, optional. */
-    private final String battery;
+    private  String battery;
+
+    public Computer() {
+    }
 
     public Computer(String cpu, String ram, String motherboard) {
         this(cpu, ram, motherboard, null);
@@ -122,6 +125,42 @@ public class Computer {
         return battery;
     }
 
+    public void setCpu(String cpu) {
+        this.cpu = cpu;
+    }
+
+    public void setRam(String ram) {
+        this.ram = ram;
+    }
+
+    public void setMotherboard(String motherboard) {
+        this.motherboard = motherboard;
+    }
+
+    public void setStorage(String storage) {
+        this.storage = storage;
+    }
+
+    public void setDisplay(String display) {
+        this.display = display;
+    }
+
+    public void setKeyboard(String keyboard) {
+        this.keyboard = keyboard;
+    }
+
+    public void setMouse(String mouse) {
+        this.mouse = mouse;
+    }
+
+    public void setSpeaker(String speaker) {
+        this.speaker = speaker;
+    }
+
+    public void setBattery(String battery) {
+        this.battery = battery;
+    }
+
     @Override
     public String toString() {
         return "Computer{"
@@ -164,8 +203,41 @@ public class Computer {
     }
 
     public static final class ComputerBuilder {
+        Computer computer = new Computer();
+       
+        public ComputerBuilder(String cpu, String ram, String motherboard) {
+            computer.setCpu(cpu);
+            computer.setRam(ram);
+            computer.setMotherboard(motherboard);
+        }
+
         public Computer build() {
-            return new Computer();
+            return computer;
+        }
+
+        public ComputerBuilder withStorage(String s) {
+            computer.setStorage(s);
+            return this;
+        }
+        public ComputerBuilder withDisplay(String s) {
+            computer.setDisplay(s);
+            return this;
+        }
+        public ComputerBuilder withKeyboard(String s) {
+            computer.setKeyboard(s);
+            return this;
+        }
+        public ComputerBuilder withMouse(String s) {
+            computer.setMouse(s);
+            return this;
+        }
+        public ComputerBuilder withSpeaker(String s) {
+            computer.setSpeaker(s);
+            return this;
+        }
+        public ComputerBuilder withBattery(String s) {
+            computer.setBattery(s);
+            return this;
         }
     }
 }
