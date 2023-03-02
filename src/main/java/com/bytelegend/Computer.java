@@ -20,72 +20,6 @@ public class Computer {
     /** The battery model, optional. */
     private final String battery;
 
-    public Computer(String cpu, String ram, String motherboard) {
-        this(cpu, ram, motherboard, null);
-    }
-
-    public Computer(String cpu, String ram, String motherboard, String storage) {
-        this(cpu, ram, motherboard, storage, null);
-    }
-
-    public Computer(String cpu, String ram, String motherboard, String storage, String display) {
-        this(cpu, ram, motherboard, storage, display, null);
-    }
-
-    public Computer(
-            String cpu,
-            String ram,
-            String motherboard,
-            String storage,
-            String display,
-            String keyboard) {
-        this(cpu, ram, motherboard, storage, display, keyboard, null);
-    }
-
-    public Computer(
-            String cpu,
-            String ram,
-            String motherboard,
-            String storage,
-            String display,
-            String keyboard,
-            String mouse) {
-        this(cpu, ram, motherboard, storage, display, keyboard, mouse, null);
-    }
-
-    public Computer(
-            String cpu,
-            String ram,
-            String motherboard,
-            String storage,
-            String display,
-            String keyboard,
-            String mouse,
-            String speaker) {
-        this(cpu, ram, motherboard, storage, display, keyboard, mouse, speaker, null);
-    }
-
-    public Computer(
-            String cpu,
-            String ram,
-            String motherboard,
-            String storage,
-            String display,
-            String keyboard,
-            String mouse,
-            String speaker,
-            String battery) {
-        this.cpu = cpu;
-        this.ram = ram;
-        this.motherboard = motherboard;
-        this.storage = storage;
-        this.display = display;
-        this.keyboard = keyboard;
-        this.mouse = mouse;
-        this.speaker = speaker;
-        this.battery = battery;
-    }
-
     public String getCpu() {
         return cpu;
     }
@@ -145,6 +79,103 @@ public class Computer {
                 + battery
                 + '}';
     }
+    /**
+     * 构造器
+     *
+     * @param computerBuilder 生成器
+     */
+    public Computer(ComputerBuilder computerBuilder) {
+        this.cpu = computerBuilder.cpu;
+        this.ram = computerBuilder.ram;
+        this.motherboard = computerBuilder.motherboard;
+        this.storage = computerBuilder.storage;
+        this.display = computerBuilder.display;
+        this.keyboard = computerBuilder.keyboard;
+        this.mouse = computerBuilder.mouse;
+        this.speaker = computerBuilder.speaker;
+        this.battery = computerBuilder.battery;
+    }
+
+    /**
+     * 生成器
+     */
+    public static final class ComputerBuilder {
+        String cpu;
+        String ram;
+        String motherboard;
+        String storage;
+        String display;
+        String keyboard;
+        String mouse;
+        String speaker;
+        String battery;
+
+        /**
+         * 生成器初始化
+         *
+         * @param cpu         处理器
+         * @param ram         内存
+         * @param motherboard 主板
+         */
+        public ComputerBuilder(String cpu, String ram, String motherboard) {
+            this.cpu = cpu;
+            this.ram = ram;
+            this.motherboard = motherboard;
+        }
+
+        // 以下都为可选组件生成器
+        public ComputerBuilder withStorage(String storage) {
+            this.storage = storage;
+            return this;
+        }
+
+        public ComputerBuilder withDisplay(String display) {
+            this.display = display;
+            return this;
+        }
+
+        public ComputerBuilder withKeyboard(String keyboard) {
+            this.keyboard = keyboard;
+            return this;
+        }
+
+        public ComputerBuilder withMouse(String mouse) {
+            this.mouse = mouse;
+            return this;
+        }
+
+        public ComputerBuilder withSpeaker(String speaker) {
+            this.speaker = speaker;
+            return this;
+        }
+
+        public ComputerBuilder withBattery(String battery) {
+            this.battery = battery;
+            return this;
+        }
+
+        /**
+         * 开始生成
+         *
+         * @return 生成结果
+         */
+        public Computer build() {
+            return new Computer(this);
+        }
+    }
+
+    /**
+     * 初始化生成器，包含必要组件
+     *
+     * @param cpu         处理器
+     * @param ram         内存
+     * @param motherboard 主板
+     * @return 生成器
+     */
+    public static ComputerBuilder builder(String cpu, String ram, String motherboard) {
+        return new ComputerBuilder(cpu, ram, motherboard);
+    }
+
 
     public static void main(String[] args) {
         Computer computer =
@@ -159,13 +190,5 @@ public class Computer {
         System.out.println(computer);
     }
 
-    public static ComputerBuilder builder(String cpu, String ram, String motherboard) {
-        return new ComputerBuilder(cpu, ram, motherboard);
-    }
 
-    public static final class ComputerBuilder {
-        public Computer build() {
-            return new Computer();
-        }
-    }
 }
