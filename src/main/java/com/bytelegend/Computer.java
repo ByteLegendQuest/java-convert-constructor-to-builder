@@ -1,6 +1,5 @@
 package com.bytelegend;
 
-
 public class Computer {
     /** The CPU model, required. */
     private final String cpu;
@@ -21,61 +20,70 @@ public class Computer {
     /** The battery model, optional. */
     private final String battery;
 
-    public Computer(ComputerBuilder computerBuilder) {
-        this.cpu = computerBuilder.cpu;
-        this.ram = computerBuilder.ram;
-        this.motherboard = computerBuilder.motherboard;
-        this.storage = computerBuilder.storage;
-        this.display = computerBuilder.display;
-        this.keyboard = computerBuilder.keyboard;
-        this.mouse = computerBuilder.mouse;
-        this.speaker = computerBuilder.speaker;
-        this.battery = computerBuilder.battery;
+    public Computer(String cpu, String ram, String motherboard) {
+        this(cpu, ram, motherboard, null);
     }
-    public static class ComputerBuilder {
-        private String cpu;
-        private String ram;
-        private String motherboard;
-        private String storage;
-        private String display;
-        private String keyboard;
-        private String mouse;
-        private String speaker;
-        private String battery;
-        public ComputerBuilder(String cpu, String ram, String motherboard) {
-            this.cpu = cpu;
-            this.ram = ram;
-            this.motherboard = motherboard;
-        }
-        public ComputerBuilder withStorage(String storage) {
-            this.storage = storage;
-            return this;
-        }
-        public ComputerBuilder withDisplay(String display) {
-            this.display = display;
-            return this;
-        }
 
-        public ComputerBuilder withKeyboard(String keyboard) {
-            this.keyboard = keyboard;
-            return this;
-        }
+    public Computer(String cpu, String ram, String motherboard, String storage) {
+        this(cpu, ram, motherboard, storage, null);
+    }
 
-        public ComputerBuilder withMouse(String mouse) {
-            this.mouse = mouse;
-            return this;
-        }
-        public ComputerBuilder withSpeaker(String speaker) {
-            this.speaker = speaker;
-            return this;
-        }
-        public ComputerBuilder withBattery(String battery) {
-            this.battery = battery;
-            return this;
-        }
-        public Computer build() {
-            return new Computer(this);
-        }
+    public Computer(String cpu, String ram, String motherboard, String storage, String display) {
+        this(cpu, ram, motherboard, storage, display, null);
+    }
+
+    public Computer(
+            String cpu,
+            String ram,
+            String motherboard,
+            String storage,
+            String display,
+            String keyboard) {
+        this(cpu, ram, motherboard, storage, display, keyboard, null);
+    }
+
+    public Computer(
+            String cpu,
+            String ram,
+            String motherboard,
+            String storage,
+            String display,
+            String keyboard,
+            String mouse) {
+        this(cpu, ram, motherboard, storage, display, keyboard, mouse, null);
+    }
+
+    public Computer(
+            String cpu,
+            String ram,
+            String motherboard,
+            String storage,
+            String display,
+            String keyboard,
+            String mouse,
+            String speaker) {
+        this(cpu, ram, motherboard, storage, display, keyboard, mouse, speaker, null);
+    }
+
+    public Computer(
+            String cpu,
+            String ram,
+            String motherboard,
+            String storage,
+            String display,
+            String keyboard,
+            String mouse,
+            String speaker,
+            String battery) {
+        this.cpu = cpu;
+        this.ram = ram;
+        this.motherboard = motherboard;
+        this.storage = storage;
+        this.display = display;
+        this.keyboard = keyboard;
+        this.mouse = mouse;
+        this.speaker = speaker;
+        this.battery = battery;
     }
 
     public String getCpu() {
@@ -155,5 +163,9 @@ public class Computer {
         return new ComputerBuilder(cpu, ram, motherboard);
     }
 
-
+    public static final class ComputerBuilder {
+        public Computer build() {
+            return new Computer();
+        }
+    }
 }
