@@ -1,3 +1,34 @@
+Skip to content
+Search or jump to…
+Pull requests
+Issues
+Codespaces
+Marketplace
+Explore
+ 
+@shiguoqing99 
+ByteLegendQuest
+/
+java-convert-constructor-to-builder
+Public
+Fork your own copy of ByteLegendQuest/java-convert-constructor-to-builder
+Code
+Issues
+Pull requests
+Actions
+Projects
+Security
+Insights
+java-convert-constructor-to-builder/src/main/java/com/bytelegend/Computer.java /
+@ByteLegendBot
+ByteLegendBot Revert "Answer by ov0o0vo (#29)"
+…
+Latest commit c431e46 last week
+ History
+ 21 contributors
+@ByteLegendBot@saveunhappy@chesterbachelor@amine01laaboudi@ov0o0vo@Tomcat-Guo@xxldm@YuanHao97@gtn1024@pipiloveslife@zerofancy@lhhhhhhhhhhhhhh
+171 lines (150 sloc)  4.41 KB
+
 package com.bytelegend;
 
 public class Computer {
