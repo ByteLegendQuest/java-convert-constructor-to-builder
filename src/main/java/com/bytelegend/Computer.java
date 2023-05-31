@@ -1,5 +1,7 @@
 package com.bytelegend;
 
+import java.util.Locale;
+
 public class Computer {
     /** The CPU model, required. */
     private final String cpu;
@@ -86,6 +88,18 @@ public class Computer {
         this.battery = battery;
     }
 
+    public Computer(ComputerBuilder builder) {
+        this.cpu = builder.cpu;
+        this.ram = builder.ram;
+        this.motherboard = builder.motherboard;
+        this.storage = builder.storage;
+        this.display = builder.display;
+        this.keyboard = builder.keyboard;
+        this.mouse = builder.mouse;
+        this.speaker = builder.speaker;
+        this.battery = builder.battery;
+    }
+
     public String getCpu() {
         return cpu;
     }
@@ -164,8 +178,61 @@ public class Computer {
     }
 
     public static final class ComputerBuilder {
+        private final String cpu;
+        /** The RAM model, required. */
+        private final String ram;
+        /** The motherboard model, required. */
+        private final String motherboard;
+        /** The storage model, optional. */
+        private String storage;
+        /** The display model, optional. */
+        private String display;
+        /** The keyboard model, optional. */
+        private String keyboard;
+        /** The mouse model, optional. */
+        private String mouse;
+        /** The speaker model, optional. */
+        private String speaker;
+        /** The battery model, optional. */
+        private String battery;
+
+        public ComputerBuilder(String cpu, String ram, String motherboard) {
+            this.cpu = cpu;
+            this.ram = ram;
+            this.motherboard = motherboard;
+        }
+
+        public ComputerBuilder withStorage(String storage) {
+            this.storage = storage;
+            return this;
+        }
+
+        public ComputerBuilder withDisplay(String display) {
+            this.display = display;
+            return this;
+        }
+
+        public ComputerBuilder withKeyboard(String keyboard) {
+            this.keyboard = keyboard;
+            return this;
+        }
+
+        public ComputerBuilder withMouse(String mouse) {
+            this.mouse = mouse;
+            return this;
+        }
+
+        public ComputerBuilder withSpeaker(String speaker) {
+            this.speaker = speaker;
+            return this;
+        }
+
+        public ComputerBuilder withBattery(String battery) {
+            this.battery = battery;
+            return this;
+        }
         public Computer build() {
-            return new Computer();
+            return new Computer(this);
         }
     }
 }
