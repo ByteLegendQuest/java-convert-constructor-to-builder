@@ -158,6 +158,7 @@ public class Computer {
     }
 
     public static final class ComputerBuilder {
+        
         private final String cpu;
         /** The RAM model, required. */
         private final String ram;
