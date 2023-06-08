@@ -8,20 +8,20 @@ public class Computer {
     /** The motherboard model, required. */
     private final String motherboard;
     /** The storage model, optional. */
-    private final String storage;
+    private String storage;
     /** The display model, optional. */
-    private final String display;
+    private String display;
     /** The keyboard model, optional. */
-    private final String keyboard;
+    private String keyboard;
     /** The mouse model, optional. */
-    private final String mouse;
+    private String mouse;
     /** The speaker model, optional. */
-    private final String speaker;
+    private String speaker;
     /** The battery model, optional. */
-    private final String battery;
+    private String battery;
 
     public Computer(String cpu, String ram, String motherboard) {
-        
+
         this(cpu, ram, motherboard, null);
     }
 
@@ -84,6 +84,30 @@ public class Computer {
         this.keyboard = keyboard;
         this.mouse = mouse;
         this.speaker = speaker;
+        this.battery = battery;
+    }
+
+     public void setStorage(String storage) {
+        this.storage = storage;
+    }
+
+    public void setDisplay(String display) {
+        this.display = display;
+    }
+
+    public void setKeyboard(String keyboard) {
+        this.keyboard = keyboard;
+    }
+
+    public void setMouse(String mouse) {
+        this.mouse = mouse;
+    }
+
+    public void setSpeaker(String speaker) {
+        this.speaker = speaker;
+    }
+
+    public void setBattery(String battery) {
         this.battery = battery;
     }
 
@@ -165,8 +189,43 @@ public class Computer {
     }
 
     public static final class ComputerBuilder {
-        public Computer build() {
-            return new Computer();
+        private final Computer computer;
+
+        public ComputerBuilder(String cpu, String ram, String motherboard) {
+            this.computer = new Computer(cpu, ram, motherboard);
+        }
+
+        public Computer build() {return computer;
+        }
+
+        public ComputerBuilder withStorage(String s) {
+            computer.setStorage(s);
+            return this;
+        }
+
+        public ComputerBuilder withDisplay(String s) {
+            computer.setDisplay(s);
+            return this;
+        }
+
+        public ComputerBuilder withKeyboard(String s) {
+            computer.setKeyboard(s);
+            return this;
+        }
+
+        public ComputerBuilder withMouse(String s) {
+            computer.setMouse(s);
+            return this;
+        }
+
+        public ComputerBuilder withSpeaker(String s) {
+            computer.setSpeaker(s);
+            return this;
+        }
+
+        public ComputerBuilder withBattery(String s) {
+            computer.setBattery(s);
+            return this;
         }
     }
 }
