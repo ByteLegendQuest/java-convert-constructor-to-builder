@@ -21,6 +21,7 @@ public class Computer {
     private final String battery;
 
     public Computer(String cpu, String ram, String motherboard) {
+        
         this(cpu, ram, motherboard, null);
     }
 
